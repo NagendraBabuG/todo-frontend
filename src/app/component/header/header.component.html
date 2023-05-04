@@ -1,0 +1,30 @@
+<div class="header">
+    <div class="title">
+        TODO APP
+    </div>
+    <div class="navlinks">
+        <ul>
+
+            <li><a [routerLink]="['/']">Home</a></li>
+            <ng-container *ngIf="!isSignedIn">
+                <li ><a [routerLink]="['/signup']">Signup</a></li>
+            </ng-container>
+
+            <ng-container *ngIf="!isSignedIn">
+                
+                <li>
+                    <a [routerLink]="['/login']">Login</a></li>
+            </ng-container>
+            <ng-container *ngIf="isSignedIn">
+                <div (mouseover)="isHovering=true" (mouseout)="isHovering=false">
+                    <li *ngIf="isHovering" class="email">{{email}}</li>
+                    <li (click)="knowMe()" *ngIf="!isHovering">Profile</li>
+                  </div>
+            </ng-container>
+            <ng-container *ngIf="isSignedIn">
+                <li (click)="logMeOut()">Logout</li>
+            </ng-container>
+
+        </ul>
+    </div>
+</div>

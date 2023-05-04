@@ -1,0 +1,26 @@
+<div class="login-container">
+    <img src="../../../assets//todoIcon.png"/>
+    <h2 class="heading">Welcome to Todo App</h2>
+    <div class="heading1">Already have an Account ? </div>
+    <div class="signup-link"><a>Login here</a></div>
+    <h2 class="loginheading">Signup with your email and password</h2>
+    <form>
+        <div class='inputs'>
+            <input type="text" name="name" required [(ngModel)]="name" placeholder="Display Name">
+            <br>
+            <input type='email' name="email" required autocomplete="current-password" [(ngModel)]="email" placeholder='Email' [ngModelOptions]="{standalone: true}" />
+            <br>
+            <input type='password' name="password" required autocomplete="current-password" [(ngModel)]="password" placeholder='password' />
+            <input type='password' name="confirmPassword" required autocomplete="current-password" [(ngModel)]="confirmPassword" placeholder='Confirm Password' />
+        </div>
+        <button type='submit' class='buttonLogin' (click)="onSubmit()">Signup</button>
+    </form>
+    <div>
+        <ng-container *ngIf="code !== 0">
+            <div [class.response]="resp" [class.error] = '!resp'>
+                {{response}}
+            </div>
+        </ng-container>
+        
+    </div>
+</div>

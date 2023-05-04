@@ -1,0 +1,22 @@
+<div class="login-container">
+        <img src="../../../assets//todoIcon.png"/>
+        <h2 class="heading">Welcome to Todo App</h2>
+        <div class="heading1">Don't have an Account ? </div>
+        <div class="signup-link"><a>Signup here</a></div>
+        <h2 class="loginheading">Login with your email and password</h2>
+        <form>
+            <div class='inputs'>
+                <input type='email' label='Email' required  name='email' [(ngModel)]="email" placeholder='email' />
+                <br>
+                <input type='password' label='Password' required name='password' autocomplete="current-password" [(ngModel)]="password" placeholder='password' />
+            </div>
+            <div className="forget-password">
+                <a>forget password?</a>
+            </div>
+            <button type='submit' class='buttonLogin' (click)="onSubmit()">Login</button>
+        </form>
+        <div>OR</div>
+        <div>
+            <button class="loginWithGoogle">Login with Google</button>
+        </div>
+</div>
