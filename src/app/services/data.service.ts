@@ -5,9 +5,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  private url : string = 'http://localhost:3001/api/getData'
-  private urlEdit : string = 'http://localhost:3001/api/editData'
-  private urlLocalhost : string = 'http://localhost:3001/createUser'
+  private url : string = 'https://todo-api-eohf.onrender.com/api/getData'
+  private urlEdit : string = 'https://todo-api-eohf.onrender.com/api/editData'
+  private urlLocalhost : string = 'https://todo-api-eohf.onrender.com/createUser'
   public todo : string[] = [];
   public done : string[] = [];
   public inProgress : string[] = []
